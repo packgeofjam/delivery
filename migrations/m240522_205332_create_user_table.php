@@ -24,6 +24,7 @@ class m240522_205332_create_user_table extends Migration
 
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
+            'status' => $this->integer()->defaultValue(0),
         ], $tableOptions);
     }
 
