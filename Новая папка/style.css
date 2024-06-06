@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-weight: 800;
+  background-color: #FFDB7E;
+}
+
+.container {
+  width: 1200px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #52D9D1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .name {
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .name p {
+  font-family: "Marvin";
+  font-weight: 400;
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+.header .menu-point {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+.header .menu-point p {
+  color: white;
+  font-size: 20px;
+}
+.header .menu-point:hover {
+  background-color: rgb(58, 180, 180);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #52D9D1;
+  padding: 15px 30px;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 7%;
+}
+
+.cover {
+  border-radius: 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 25px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cover p {
+  font-family: "Marvin";
+  font-weight: 400;
+  color: white;
+  font-size: 62px;
+  width: 600px;
+  margin: 0px 0px 60px 7%;
+}
+
+.cheese {
+  background: url(img/Group\ 1.png);
+  background-size: 1200px;
+  background-position-y: -30px;
+}
+.cheese p {
+  margin: 0px 0px 20px 7%;
+}
+.cheese .st {
+  font-size: 30px;
+}
+
+.coffee {
+  background: url(img/Group\ 2.png);
+  background-size: 1200px;
+  background-position-y: -30px;
+}
+
+.covers {
+  width: 1200px;
+  transition: transform 0.5s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

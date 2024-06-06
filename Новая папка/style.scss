@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    font-weight: 800;
+    background-color: #FFDB7E;
+}
+
+@mixin space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    background-color: #52D9D1;
+    @include center;
+}
+
+.header {
+    @include space-between;
+    .name {
+        width: 220px;
+        @include space-between;
+        p {
+            font-family: "Marvin";
+            font-weight: 400;
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+    }
+    .menu-point {
+        width: 100px;
+        @include space-between;
+        padding: 5px 20px;
+        p {
+            color: white;
+            font-size: 20px;
+        }
+    }
+    .menu-point:hover {
+        background-color: rgb(58, 180, 180);
+    }
+}
+
+main {
+    @include center;
+}
+
+.button {
+    background-color: #52D9D1;
+    padding: 15px 30px;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 7%;
+}
+
+.cover {
+    border-radius: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 25px;
+    width: 100%;
+    object-fit: cover;
+    p {
+        font-family: "Marvin";
+        font-weight: 400;
+        color: white;
+        font-size: 62px;
+        width: 600px;
+        margin: 0px 0px 60px 7%;
+    }
+}
+
+.cheese {
+    background: url(img/Group\ 1.png);
+    background-size: 1200px;
+    background-position-y: -30px;
+    p {
+        margin: 0px 0px 20px 7%;
+    }
+    .st {
+        font-size: 30px;
+    }
+}
+
+.coffee {
+    background: url(img/Group\ 2.png);
+    background-size: 1200px;
+    background-position-y: -30px;
+}
+
+.covers {
+    // display: flex;
+    // flex-wrap: nowrap;
+    // align-items: center;
+    width: 1200px;
+    transition: transform 0.5s ease-in-out;
+}
