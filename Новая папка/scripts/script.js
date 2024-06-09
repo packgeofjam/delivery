@@ -1,7 +1,7 @@
 const slider = document.querySelector('.covers');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
-const slides = Array.from(slider.querySelectorAll('.cover'));
+const slides = Array.from(slider.querySelectorAll('div'));
 const slideCount = slides.length;
 let slideIndex = 0;
 

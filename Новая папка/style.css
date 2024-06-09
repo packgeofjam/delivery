@@ -70,14 +70,25 @@ main {
   align-items: center;
 }
 
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
 .button {
   background-color: #52D9D1;
   padding: 15px 30px;
   color: white;
   font-size: 24px;
+  font-weight: 600;
   border: none;
   border-radius: 10px;
   margin-left: 7%;
+}
+
+.button:hover {
+  background-color: rgb(58, 180, 180);
 }
 
 .cover {
@@ -87,8 +98,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 25px;
-  width: 100%;
+  min-width: 1200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -120,6 +130,32 @@ main {
 }
 
 .covers {
-  width: 1200px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   transition: transform 0.5s ease-in-out;
+  width: 1200px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 300px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: rgb(150, 150, 150);
+  background-color: rgb(243, 236, 236);
+}
+
+.prev-button {
+  margin-right: 1300px;
+}
+
+.next-button {
+  margin-left: 1300px;
 }/*# sourceMappingURL=style.css.map */
