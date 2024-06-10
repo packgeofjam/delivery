@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-weight: 800;
+  background-color: #FFDB7E;
+}
+
+.container {
+  width: 1200px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #52D9D1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .name {
+  width: 220px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .name p {
+  font-family: "Marvin";
+  font-weight: 400;
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  background-color: rgb(58, 180, 180);
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.button {
+  background-color: #52D9D1;
+  padding: 15px 30px;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-left: 7%;
+}
+
+.button:hover {
+  background-color: rgb(58, 180, 180);
+}
+
+.cover {
+  border-radius: 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 1200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cover p {
+  font-family: "Marvin";
+  font-weight: 400;
+  color: white;
+  font-size: 62px;
+  width: 600px;
+  margin: 0px 0px 60px 7%;
+}
+
+.cheese {
+  background: url(img/Group\ 1.png);
+  background-size: 1200px;
+  background-position-y: -30px;
+}
+.cheese p {
+  margin: 0px 0px 20px 7%;
+}
+.cheese .st {
+  font-size: 30px;
+}
+
+.coffee {
+  background: url(img/Group\ 2.png);
+  background-size: 1200px;
+  background-position-y: -30px;
+}
+
+.covers {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  width: 1200px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 300px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: rgb(150, 150, 150);
+  background-color: rgb(243, 236, 236);
+}
+
+.prev-button {
+  margin-right: 1300px;
+}
+
+.next-button {
+  margin-left: 1300px;
+}
+
+.site-login h1, .site-signup h1 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 40px;
+  margin: 20px 0px;
+}/*# sourceMappingURL=style.css.map */
