@@ -46,7 +46,12 @@ AppAsset::register($this);
                     )
                     . Html::endForm()
                     . '</li>',
-                ['label' => 'Sign up', 'url' => ['../site/signup']]
+                Yii::$app->user->isGuest
+                    ? ['label' => 'Sign up', 'url' => ['../site/signup']]
+                    : '<li>'
+                    . Html::beginForm(['/site/signup'])
+                    . Html::endForm()
+                    . '</li>',
             ]
         ]);
         ?>

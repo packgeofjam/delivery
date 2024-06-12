@@ -20,6 +20,10 @@ body {
     align-items: center;
 }
 
+p, h2 {
+    color: #58362f;
+}
+
 .container {
     width: 1200px;
 }
@@ -167,4 +171,50 @@ main {
     font-weight: 800;
     font-size: 40px;
     margin: 20px 0px;
+}
+
+.menu {
+    padding: 5px 30px;
+    background-color: white;
+    border: 3px solid #B67465;
+    border-radius: 10px;
+    color: #B67465;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.catalog {
+    margin-top: 120px;
+}
+
+.menu1 {
+    background-color: #B67465;
+    color: white;
+}
+
+.catalog-list {
+    @include space-between;
+    margin-top: 30px;
+}
+
+.catalog-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px 20px 20px 0px;
+    width: 32%;
+}
+
+.name-item {
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.basket {
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 0;
 }
