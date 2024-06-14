@@ -19,12 +19,12 @@ for ($data = [];
 ?>
 <div class="slider-container">
     <div class="covers">
-        <div class="cover cheese container">
+        <div class="cover cheese-cover container">
             <p>ЗАКАЖИ СОЧНЫЙ СЫРНЫЙ ОБЕД</p>
             <p class="st">20% скидка для новых клиентов</p>
             <button href="" class="button">Использовать промокод</button>
         </div>
-        <div class="cover coffee container">
+        <div class="cover coffee-cover container">
             <p>КОФЕ С СЫРНОЙ ПЕНКОЙ</p>
             <button href="" class="button">Перейти в каталог</button>
         </div>
@@ -34,39 +34,51 @@ for ($data = [];
 <button class="next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
 <div class="catalog container">
     <div class="catalog-menu">
-        <button class="menu menu1" data-category="popular">Популярное</button>
+        <button class="menu button-active" data-category="popular">Популярное</button>
         <button class="menu" data-category="pizza">Пицца</button>
-        <button class="menu" data-category="burgers"><img src="img/спорткар.svg" alt="">Бургеры</button>
-        <button class="menu" data-category="snacks"><img src="img/премиум.svg" alt="">Снеки и соусы</button>
-        <button class="menu" data-category="coffee"><img src="img/комфорт.svg" alt="">Кофе</button>
-        <button class="menu" data-category="limonade"><img src="img/комфорт.svg" alt="">Лимонад</button>
-        <button class="menu" data-category="milkshakes"><img src="img/комфорт.svg" alt="">Молочные коктейли</button>
+        <button class="menu" data-category="burger">Бургеры</button>
+        <button class="menu" data-category="snacks">Снеки и соусы</button>
+        <button class="menu" data-category="coffee">Кофе</button>
+        <button class="menu" data-category="limonade">Лимонад</button>
+        <button class="menu" data-category="milkshakes">Молочные коктейли</button>
     </div>
     <div class="catalog-list">
         <?php
         foreach ($data as $row) {
             echo '<div class="catalog-item '; 
             if ($row['popular'] == 1) {
-                echo 'popular';
+                echo 'popular ';
             };
             if ($row['category'] == 'pizza') {
                 echo 'pizza';
-            } elseif ($row['category'] == 'burgers') {
-                echo 'burgers';
+            } elseif ($row['category'] == 'burger') {
+                echo 'burger';
             } elseif ($row['category'] == 'snacks') {
                 echo 'snacks';
             } elseif ($row['category'] == 'coffee') {
                 echo 'coffee';
             } elseif ($row['category'] == 'limonade') {
-                echo 'plimonade';
+                echo 'limonade';
             } elseif ($row['category'] == 'milkshakes') {
                 echo 'milkshakes';
             };
             echo '">
-            <img src="img/'.$row['shortname'].'.png" alt="">
-            <p class="name-item">'.$row['name'].'</p>
-            <p>'.$row['price'].' рублей</p>
-            <button class="button basket">В корзину</button>
+            <img src="css/img/'.$row['shortname'].'.png" alt="">
+            <div class="product">
+            <p>'.$row['name'].'</p>
+            <p class="desc">'.$row['description'].'</p>
+            <div class="price-box">';
+            if ($row['discount'] == 1) {
+                echo '<p>'.$row['discount-price'].' ₽</p>';
+            };
+            echo '<p ';
+            if ($row['discount'] == 1) {
+                echo 'class="old-price"';
+            };
+            echo'>'.$row['price'].' ₽</p>
+            </div>
+            <button class="button basket-btn">В корзину</button>
+            </div>
             </div>';
         }
         ?>
