@@ -141,4 +141,9 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function actionOrder()
+    {
+        return $this->render('order');
+    }
 }

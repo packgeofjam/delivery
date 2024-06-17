@@ -21,7 +21,7 @@ class m240612_200911_catalog_table extends Migration
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
             'shortname' => $this->string()->notNull()->unique(),
-            'description' => $this->string()->notNull(),
+            'description' => $this->string(),
             'price' => $this->integer()->notNull(),
             'category' => $this->string()->notNull(),
             'availability' => $this->boolean()->notNull()->defaultValue(1),

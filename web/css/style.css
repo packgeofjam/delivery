@@ -3,7 +3,6 @@ body {
   padding: 0;
   font-family: "Montserrat";
   font-weight: 800;
-  background-color: #FFDB7E;
 }
 
 p, h2 {
@@ -40,7 +39,8 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.header .name {
+
+.name {
   width: 220px;
   text-decoration: none;
   display: flex;
@@ -48,7 +48,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.header .name p {
+.name p {
   font-family: "Marvin";
   font-weight: 400;
   color: white;
@@ -77,12 +77,16 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #FFDB7E;
+  padding-bottom: 50px;
 }
 
 .slider-container {
   position: relative;
   overflow: hidden;
   margin-top: 25px;
+  width: 96%;
+  max-width: 1200px;
 }
 
 .button {
@@ -96,6 +100,11 @@ main {
   margin-left: 7%;
 }
 
+.btn-login {
+  margin: 0;
+  padding: 10px 30px;
+}
+
 .button:hover {
   background-color: rgb(58, 180, 180);
 }
@@ -107,9 +116,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-width: 1200px;
+  min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  padding: 0;
 }
 .cover p {
   font-family: "Marvin";
@@ -138,35 +148,47 @@ main {
   background-position-y: -30px;
 }
 
+.pizza-cover {
+  background: url(img/Group\ 18.png);
+  background-size: 1200px;
+}
+.pizza-cover p {
+  margin: 0px 0px 20px 7%;
+}
+.pizza-cover .st {
+  font-size: 30px;
+}
+
 .covers {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   transition: transform 0.5s ease-in-out;
-  width: 1200px;
+  width: 100%;
+}
+
+.slide {
+  width: 98%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 300px;
 }
 
 .prev-button,
 .next-button {
-  position: absolute;
-  top: 300px;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 30px;
   background-color: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 30px;
   color: rgb(150, 150, 150);
   background-color: rgb(255, 255, 255);
-}
-
-.prev-button {
-  margin-right: 1300px;
-}
-
-.next-button {
-  margin-left: 1300px;
 }
 
 .site-login h1, .site-signup h1 {
@@ -200,9 +222,6 @@ main {
 .catalog-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: flex-start;
   margin-top: 30px;
   flex-wrap: wrap;
 }
@@ -211,19 +230,18 @@ main {
   background-color: white;
   border-radius: 10px;
   padding: 30px;
-  margin: 0px 20px 20px 0px;
+  margin: 0px 10px 20px 10px;
   width: 31%;
   min-width: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   display: none;
 }
 .catalog-item .product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300px;
+  height: 100%;
   margin-top: 10px;
 }
 .catalog-item p {
@@ -259,4 +277,34 @@ main {
 
 .popular {
   display: flex;
+}
+
+footer {
+  background-color: #52D9D1;
+  padding: 20px 0px;
+}
+footer p {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+footer p img {
+  margin-right: 20px;
+  width: 30px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.site-login, .site-signup {
+  margin: 50px 0px;
+}
+
+.nav li form {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=style.css.map */

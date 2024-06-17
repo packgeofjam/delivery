@@ -4,9 +4,10 @@ let category = new Map([
     ['pizza', document.querySelectorAll('.pizza')],
     ['burger', document.querySelectorAll('.burger')],
     ['snacks', document.querySelectorAll('.snacks')],
+    ['other', document.querySelectorAll('.other')],
     ['coffee', document.querySelectorAll('.coffee')],
     ['limonade', document.querySelectorAll('.limonade')],
-    ['milkshakes', document.querySelectorAll('.milkshakes')],
+    ['milkshake', document.querySelectorAll('.milkshake')],
 ]);
 let allCards = document.querySelectorAll('.catalog-item')
 function DisplayCards(cat) {

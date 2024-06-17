@@ -26,21 +26,29 @@ for ($data = [];
         </div>
         <div class="cover coffee-cover container">
             <p>КОФЕ С СЫРНОЙ ПЕНКОЙ</p>
-            <button href="" class="button">Перейти в каталог</button>
+            <button href="" class="button" data-category="coffee">Перейти в каталог</button>
+        </div>
+        <div class="cover pizza-cover container">
+            <p>Скидка 10% на всю пиццу</p>
+            <p class="st">Суммируется с другими акциями</p>
+            <button href="" class="button">Использовать промокод</button>
         </div>
     </div>
 </div>
-<button class="prev-button" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-<button class="next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
+<div class="slide">
+    <button class="prev-button" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+    <button class="next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
+</div>
 <div class="catalog container">
     <div class="catalog-menu">
         <button class="menu button-active" data-category="popular">Популярное</button>
         <button class="menu" data-category="pizza">Пицца</button>
         <button class="menu" data-category="burger">Бургеры</button>
         <button class="menu" data-category="snacks">Снеки и соусы</button>
+        <button class="menu" data-category="other">Другое</button>
         <button class="menu" data-category="coffee">Кофе</button>
         <button class="menu" data-category="limonade">Лимонад</button>
-        <button class="menu" data-category="milkshakes">Молочные коктейли</button>
+        <button class="menu" data-category="milkshake">Молочные коктейли</button>
     </div>
     <div class="catalog-list">
         <?php
@@ -55,12 +63,14 @@ for ($data = [];
                 echo 'burger';
             } elseif ($row['category'] == 'snacks') {
                 echo 'snacks';
+            } elseif ($row['category'] == 'other') {
+                echo 'other';
             } elseif ($row['category'] == 'coffee') {
                 echo 'coffee';
             } elseif ($row['category'] == 'limonade') {
                 echo 'limonade';
-            } elseif ($row['category'] == 'milkshakes') {
-                echo 'milkshakes';
+            } elseif ($row['category'] == 'milkshake') {
+                echo 'milkshake';
             };
             echo '">
             <img src="css/img/'.$row['shortname'].'.png" alt="">
@@ -86,3 +96,4 @@ for ($data = [];
     </div>
 </div>
 <script src="scripts/script.js"></script>
+
