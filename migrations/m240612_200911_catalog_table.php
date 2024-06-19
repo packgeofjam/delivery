@@ -27,7 +27,7 @@ class m240612_200911_catalog_table extends Migration
             'availability' => $this->boolean()->notNull()->defaultValue(1),
             'popular' => $this->boolean()->notNull()->defaultValue(0),
             'discount' => $this->boolean()->notNull()->defaultValue(0),
-            'discount-price' => $this->integer()
+            'old-price' => $this->integer()
         ], $tableOptions);
     }
 

@@ -2,19 +2,10 @@
 
 /** @var yii\web\View $this */
 
+use yii\helpers\Html;
+use yii\helpers\Url;
+
 $this->title = 'My Yii Application';
-
-$host = 'localhost'; //имя хоста, на локальном компьютере это localhost
-$user = 'root'; //имя пользователя, по умолчанию это root
-$password = ''; //пароль, по умолчанию пустой
-$db_name = 'delivery'; //имя базы данных
-
-$link = mysqli_connect($host, $user, $password, $db_name);
-$query = "SELECT * FROM catalog";
-$result = mysqli_query($link, $query) or die( mysqli_error($link) );
-for ($data = []; 
-    $row = mysqli_fetch_assoc($result);
-    $data[] = $row);
 
 ?>
 <div class="slider-container">
@@ -22,16 +13,16 @@ for ($data = [];
         <div class="cover cheese-cover container">
             <p>ЗАКАЖИ СОЧНЫЙ СЫРНЫЙ ОБЕД</p>
             <p class="st">20% скидка для новых клиентов</p>
-            <button href="" class="button">Использовать промокод</button>
+            <a href="" class="button">Использовать промокод</a>
         </div>
         <div class="cover coffee-cover container">
             <p>КОФЕ С СЫРНОЙ ПЕНКОЙ</p>
-            <button href="" class="button" data-category="coffee">Перейти в каталог</button>
+            <a class="coffee-button button" href="#catalog" class="button" data-category="coffee">Перейти в каталог</a>
         </div>
         <div class="cover pizza-cover container">
             <p>Скидка 10% на всю пиццу</p>
-            <p class="st">Суммируется с другими акциями</p>
-            <button href="" class="button">Использовать промокод</button>
+            <p class="st">не суммируется с другими акциями</p>
+            <a href="" class="button">Использовать промокод</a>
         </div>
     </div>
 </div>
@@ -39,7 +30,7 @@ for ($data = [];
     <button class="prev-button" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
     <button class="next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
 </div>
-<div class="catalog container">
+<div class="catalog container" id="catalog">
     <div class="catalog-menu">
         <button class="menu button-active" data-category="popular">Популярное</button>
         <button class="menu" data-category="pizza">Пицца</button>
@@ -53,7 +44,7 @@ for ($data = [];
     <div class="catalog-list">
         <?php
         foreach ($data as $row) {
-            echo '<div class="catalog-item '; 
+            echo '<div class="catalog-item ';
             if ($row['popular'] == 1) {
                 echo 'popular ';
             };
@@ -78,21 +69,26 @@ for ($data = [];
             <p>'.$row['name'].'</p>
             <p class="desc">'.$row['description'].'</p>
             <div class="price-box">';
-            if ($row['discount'] == 1) {
-                echo '<p>'.$row['discount-price'].' ₽</p>';
-            };
-            echo '<p ';
-            if ($row['discount'] == 1) {
-                echo 'class="old-price"';
-            };
-            echo'>'.$row['price'].' ₽</p>
-            </div>
-            <button class="button basket-btn">В корзину</button>
+            echo '<p>'.$row['price'].' ₽</p>';
+                if ($row['discount'] == 1) {
+                    echo '<p class="old-price">'.$row['old-price'].' ₽</p>';
+                }
+            echo '</div>
+            <form method="post" action="'.Url::toRoute(['basket/add']).'">
+                                        <input type="hidden" name="id"
+                                               value="'.$row['id'].'">'.Html::hiddenInput(
+                                            Yii::$app->request->csrfParam,
+                                            Yii::$app->request->csrfToken).
+                                        '<button type="submit" class="button basket-btn">
+                                            Добавить в корзину
+                                        </button>
+                                    </form>
             </div>
             </div>';
         }
         ?>
         <script src="scripts/filter.js"></script>
+        <script src="scripts/coffee-button.js"></script>
     </div>
 </div>
 <script src="scripts/script.js"></script>

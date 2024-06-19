@@ -10,8 +10,9 @@ use yii\web\IdentityInterface;
 
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 1;
-    const STATUS_ACTIVE = 0;
+    const STATUS_USER = 0;
+    const STATUS_ADMIN = 1;
+    const STATUS_COURIER = 2;
 
     public static function tableName()
     {
@@ -132,8 +133,8 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            ['status', 'default', 'value' => self::STATUS_USER],
+            ['status', 'in', 'range' => [self::STATUS_USER, self::STATUS_ADMIN, self::STATUS_COURIER]],
             ['email', 'safe']
         ];
     }

@@ -32,12 +32,3 @@ for (let button of buttons) {
     }
     })
 }
-document.querySelector('.button-watch').addEventListener('click', function(evt) {
-    evt.preventDefault();
-    allCards.forEach((card) => {
-    card.style.display = 'flex';
-    })
-    buttons.forEach((button) => {
-    button.classList.remove("button-active")
-    })
-})

@@ -21,11 +21,11 @@ class m240613_123812_add_products extends Migration
             'name' => 'Сырные палочки',
             'shortname' => 'cheesesticks',
             'description' => 'Пять палочек сыра маасдам, обжаренные в хрустящей панировке, оригинальный рецепт',
-            'price' => 249,
+            'price' => 219,
             'category' => 'snacks',
             'popular' => 1,
             'discount' => 1,
-            'discount-price' => 219,
+            'old-price' => 249,
         ]);
         $this->insert('catalog', [
             'name' => 'Картофельные шарики',
@@ -112,11 +112,11 @@ class m240613_123812_add_products extends Migration
             'name' => 'Настоящий чизбургер',
             'shortname' => 'therealcheeseburger',
             'description' => 'Сумасшедший бургер с 20 слоями сыра. Легенда для безумных любителей сыра',
-            'price' => 389,
+            'price' => 329,
             'category' => 'burger',
             'popular' => 1,
             'discount' => 1,
-            'discount-price' => 329,
+            'old-price' => 389,
         ]);
         $this->insert('catalog', [
             'name' => 'Овощной бургер',
@@ -219,10 +219,10 @@ class m240613_123812_add_products extends Migration
             'name' => 'Моккачино',
             'shortname' => 'mokkachino',
             'description' => 'Молочный кофе с добавлением шоколада и сгущёной сырной пенки 320мл',
-            'price' => 289,
+            'price' => 259,
             'category' => 'coffee',
             'discount' => 1,
-            'discount-price' => 259,
+            'old-price' => 289,
         ]);
         $this->insert('catalog', [
             'name' => 'Раф',
@@ -235,8 +235,10 @@ class m240613_123812_add_products extends Migration
             'name' => 'Айс кофе',
             'shortname' => 'icecoffee',
             'description' => 'Холодный кофе со льдом, в жаркую погоду 320мл',
-            'price' => 199,
+            'price' => 179,
             'category' => 'coffee',
+            'discount' => 1,
+            'old-price' => 199,
         ]);
         $this->insert('catalog', [
             'name' => 'Лимонад классический',
@@ -249,11 +251,11 @@ class m240613_123812_add_products extends Migration
             'name' => 'Лимонад ваниль лаванда',
             'shortname' => 'vanillimonade',
             'description' => 'Ванильный сладкий лимонад с нотками лаванды 400мл',
-            'price' => 259,
+            'price' => 289,
             'category' => 'limonade',
             'popular' => 1,
             'discount' => 1,
-            'discount-price' => 239,
+            'old-price' => 259,
         ]);
         $this->insert('catalog', [
             'name' => 'Лимонад клубника базилик',
@@ -287,35 +289,35 @@ class m240613_123812_add_products extends Migration
             'name' => 'Молочный коктейль ванильный',
             'shortname' => 'vanilmilk',
             'description' => '400мл',
-            'price' => 159,
+            'price' => 179,
             'category' => 'milkshake',
         ]);
         $this->insert('catalog', [
             'name' => 'Молочный коктейль клубничный',
             'shortname' => 'strawberrymilk',
             'description' => '400мл',
-            'price' => 159,
+            'price' => 179,
             'category' => 'milkshake',
         ]);
         $this->insert('catalog', [
             'name' => 'Молочный коктейль малиновый',
             'shortname' => 'raspberrymilk',
             'description' => '400мл',
-            'price' => 159,
+            'price' => 179,
             'category' => 'milkshake',
         ]);
         $this->insert('catalog', [
             'name' => 'Молочный коктейль манго персик',
             'shortname' => 'mangomilk',
             'description' => '400мл',
-            'price' => 179,
+            'price' => 199,
             'category' => 'milkshake',
         ]);
         $this->insert('catalog', [
             'name' => 'Молочный коктейль слива абрикос',
             'shortname' => 'plumapricotmilk',
             'description' => '400мл',
-            'price' => 179,
+            'price' => 199,
             'category' => 'milkshake',
         ]);
     }

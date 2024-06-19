@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 $this->title = 'Регистрация';
 ?>
-<div class="site-signup container">
+<div class="site-main container">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="row">

@@ -10,7 +10,7 @@ use yii\bootstrap5\Html;
 
 $this->title = 'Войти';
 ?>
-<div class="site-login container">
+<div class="site-main container">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="row">
@@ -41,7 +41,8 @@ $this->title = 'Войти';
             </div>
 
             <?php ActiveForm::end(); ?>
-
+            <br>
+            <p>Нет аккаунта? <a href="signup">Зарегистрируйтесь</a></p>
         </div>
     </div>
 </div>
