@@ -143,50 +143,6 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
-//    public function actionOrder()
-//    {
-//        $session = Yii::$app->session;
-//        $session->open();
-//
-//        if($session->has('productsSession')) {
-//            $productsSession = $session->get('productsSession');
-//        }
-//        else {
-//            $productsSession = array();
-//        }
-//
-//        if (isset($_GET['id']) && !empty($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT)) {
-//
-//            $productsArray = Products::find()->where(['id' => $_GET['id']])->asArray()->one();
-//            if (is_array($productsArray) && count($productsArray) > 0) {
-//                $flag = false;
-//                for($i =0; $i < count($productsSession); $i++) {
-//                    if($productsSession[$i]['id'] == $_GET['id']) {
-//                        $flag = true;
-//                        $productsSession[$i]['count']++;
-//                    }
-//                    break;
-//                }
-//                if(!$flag) {
-//                    array_push($productsArray, ['id' => $_GET['id'], 'count' => 1]);
-//                }
-//            }
-//        }
-//
-//        $session->set('productsSession', $productsArray);
-//        $productsSession = $session->get('productsSession');
-//
-//        $arrayID = array();
-//        if (is_array($productsSession)) { foreach ($productsSession as $value) {
-//            if (is_array($value) && isset($value['id'])) {
-//                array_push($arrayID, $value['id']);
-//            }
-//        } }
-//        $products = Products::find()->where(['id' => $arrayID])->asArray()->All();
-//
-//        return $this->render('order', compact('products'));
-//    }
 }
 
 

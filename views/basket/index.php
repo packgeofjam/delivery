@@ -46,7 +46,7 @@ use yii\helpers\Url;
                         </tr>
                     </table>
                     <a href="basket/clear" class="clear-basket">Очистить корзину</a>
-                    <?= '<form method="post" action="'. Url::toRoute(['basket/plus']).'">
+                    <?= '<form method="post" action="'. Url::toRoute(['/order/checkout']).'">
                                             <input type="hidden" name="id"
                                                    value="'.$item['id'].'">'. Html::hiddenInput(
                     Yii::$app->request->csrfParam,

@@ -3,8 +3,9 @@ namespace app\controllers;
 
 use app\models\Basket;
 use Yii;
+use yii\web\Controller;
 
-class BasketController extends SiteController
+class BasketController extends Controller
 {
     public function actionIndex()
     {
