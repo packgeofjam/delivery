@@ -359,6 +359,10 @@ footer {
     @include space-between;
 }
 
+.notavailable {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
     .cover {
         p {

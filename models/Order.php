@@ -27,7 +27,7 @@ class Order extends ActiveRecord {
                 'message' => 'Номер телефона должен соответствовать шаблону +7 (495) 123-45-67'
             ],
             [['name', 'email', 'phone'], 'string', 'max' => 50],
-            [['address', 'comment'], 'string', 'max' => 255],
+            [['address', 'comment', 'delivery_type', 'promo'], 'string', 'max' => 255],
         ];
     }
     public function attributeLabels() {

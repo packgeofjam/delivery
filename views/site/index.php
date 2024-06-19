@@ -44,6 +44,7 @@ $this->title = 'My Yii Application';
     <div class="catalog-list">
         <?php
         foreach ($data as $row) {
+            if ($row['availability'] == 1) {
             echo '<div class="catalog-item ';
             if ($row['popular'] == 1) {
                 echo 'popular ';
@@ -85,7 +86,7 @@ $this->title = 'My Yii Application';
                                     </form>
             </div>
             </div>';
-        }
+        }}
         ?>
         <script src="scripts/filter.js"></script>
         <script src="scripts/coffee-button.js"></script>
